@@ -1,0 +1,99 @@
+﻿@model matxicorp.Models.AddEmployeeViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="data-entry">
+    <h1>Create</h1>
+    <hr />
+    <form asp-action="Create" enctype="multipart/form-data" autocomplete="off">
+        <div class="row">
+            <div class="col-md-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="JsonTeamLeaders" id="cachedTeamLeaders" />
+                <input type="hidden" asp-for="JsonDirectManagers" id="cachedDirectManagers" />
+                <div class="form-group">
+                    <label asp-for="EmployeeCode" class="control-label">Code</label>
+                    <input asp-for="EmployeeCode" class="form-control" />
+                    <span asp-validation-for="EmployeeCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label">First Name</label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label">Last Name</label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mobile" class="control-label">Phone</label>
+                    <input asp-for="Mobile" class="form-control" />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label">Email</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Level" class="control-label">Level</label>
+                    <select asp-for="Level" class="form-control" asp-items="ViewBag.LevelCode"></select>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" id="directManagerInfo">
+            <div class="col-md-4">
+                <div class="form-group autocomplete">
+                    <label asp-for="ParentCode" class="control-label">Direct Manager</label>
+                    <input asp-for="ParentCode" class="form-control" placeholder="Direct Manager Code..." />
+                    <span asp-validation-for="ParentCode" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">&nbsp;</label>
+                    <input asp-for="ParentName" class="form-control" disabled />
+                </div>
+            </div>
+        </div>
+        <div class="row" id="teamLeadInfo">
+            <div class="col-md-4">
+                <div class="form-group autocomplete">
+                    <label asp-for="LeaderCode" class="control-label">Team Leader</label>
+                    <input asp-for="LeaderCode" class="form-control" placeholder="Leader Code..." />
+                    <span asp-validation-for="Level" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">&nbsp;</label>
+                    <input asp-for="LeaderName" class="form-control" disabled />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            CreatedEmployee.Load();
+        });
+    </script>
+}

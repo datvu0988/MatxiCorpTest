@@ -1,0 +1,126 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-webgalleriet-CEB5ACEB-1C95-454E-8981-6ECD0F815CD1</UserSecretsId>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+    <AssemblyName>matxicorp</AssemblyName>
+    <RootNamespace>matxicorp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Management\**" />
+    <Compile Remove="Views\Artist\**" />
+    <Compile Remove="Views\Artwork\**" />
+    <Compile Remove="Views\Galleries\**" />
+    <Compile Remove="Views\Room\**" />
+    <Content Remove="Management\**" />
+    <Content Remove="Views\Artist\**" />
+    <Content Remove="Views\Artwork\**" />
+    <Content Remove="Views\Galleries\**" />
+    <Content Remove="Views\Room\**" />
+    <EmbeddedResource Remove="Management\**" />
+    <EmbeddedResource Remove="Views\Artist\**" />
+    <EmbeddedResource Remove="Views\Artwork\**" />
+    <EmbeddedResource Remove="Views\Galleries\**" />
+    <EmbeddedResource Remove="Views\Room\**" />
+    <None Remove="Management\**" />
+    <None Remove="Views\Artist\**" />
+    <None Remove="Views\Artwork\**" />
+    <None Remove="Views\Galleries\**" />
+    <None Remove="Views\Room\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ArtistController.cs" />
+    <Compile Remove="Controllers\ArtworkController.cs" />
+    <Compile Remove="Controllers\GalleriesController.cs" />
+    <Compile Remove="Controllers\RoomController.cs" />
+    <Compile Remove="Data\ArtistRepository.cs" />
+    <Compile Remove="Data\ArtworkRepository.cs" />
+    <Compile Remove="Data\Contracts\IArtistRepository.cs" />
+    <Compile Remove="Data\Contracts\IArtworkRepository.cs" />
+    <Compile Remove="Data\Contracts\IDefaultMaxRepository.cs" />
+    <Compile Remove="Data\Contracts\IGalleryRepository.cs" />
+    <Compile Remove="Data\Contracts\IGalleryTypeRepository.cs" />
+    <Compile Remove="Data\Contracts\IRoomRepository.cs" />
+    <Compile Remove="Data\DefaultMaxRepository.cs" />
+    <Compile Remove="Data\Entities\Artist.cs" />
+    <Compile Remove="Data\Entities\Artwork.cs" />
+    <Compile Remove="Data\Entities\DefaultMax.cs" />
+    <Compile Remove="Data\Entities\Gallery.cs" />
+    <Compile Remove="Data\Entities\GalleryType.cs" />
+    <Compile Remove="Data\Entities\Room.cs" />
+    <Compile Remove="Data\GalleryRepository.cs" />
+    <Compile Remove="Data\GalleryTypeRepository.cs" />
+    <Compile Remove="Data\Migrations\20200914151550_webgalleriet.Data.ApplicationDbContext.cs" />
+    <Compile Remove="Data\Migrations\20200914151550_webgalleriet.Data.ApplicationDbContext.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200914153522_webgalleriet.Data.ApplicationDbContext.cs" />
+    <Compile Remove="Data\Migrations\20200914153522_webgalleriet.Data.ApplicationDbContext.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200917114058_Initital.cs" />
+    <Compile Remove="Data\Migrations\20200917114058_Initital.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200919034454_UpdatePhotoColumnInArtworkTable.cs" />
+    <Compile Remove="Data\Migrations\20200919034454_UpdatePhotoColumnInArtworkTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200919041408_UpdatePhotoInArtworkTable.cs" />
+    <Compile Remove="Data\Migrations\20200919041408_UpdatePhotoInArtworkTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200925161837_UpdateArtist_Room_Artwork_Gallery.cs" />
+    <Compile Remove="Data\Migrations\20200925161837_UpdateArtist_Room_Artwork_Gallery.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201011144839_AddOrderInArtworkTable.cs" />
+    <Compile Remove="Data\Migrations\20201011144839_AddOrderInArtworkTable.Designer.cs" />
+    <Compile Remove="Data\ParentBreadcrumbAttribute.cs" />
+    <Compile Remove="Data\RoomRepository.cs" />
+    <Compile Remove="Extensions\AllowedExtensionsAttribute.cs" />
+    <Compile Remove="Extensions\MaxFileSizeAttribute.cs" />
+    <Compile Remove="Filter\BreadcrumbActionFilter.cs" />
+    <Compile Remove="Helpers\FileUploadHelper.cs" />
+    <Compile Remove="Models\AddArtistViewModel.cs" />
+    <Compile Remove="Models\AddArtworkModel.cs" />
+    <Compile Remove="Models\AddRoomModel.cs" />
+    <Compile Remove="Models\EditArtistViewModel.cs" />
+    <Compile Remove="Models\EditArtworkModel.cs" />
+    <Compile Remove="Models\OrderArtworkModel.cs" />
+    <Compile Remove="Models\PreviewGalleryModel.cs" />
+    <Compile Remove="Models\RoomDetailModel.cs" />
+    <Compile Remove="Models\ViewArtistSummaryModel.cs" />
+    <Compile Remove="Models\ViewArtworkModel.cs" />
+    <Compile Remove="Models\ViewRoomModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Employee\Summary.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="MediaTypeMap" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="SendGrid" Version="9.21.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Filter\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\HandleErrorWithStatusCode.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+
+</Project>

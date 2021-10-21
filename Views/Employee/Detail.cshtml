@@ -1,0 +1,82 @@
+﻿@model matxicorp.Models.EmployeeDetailViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    var FullName = $"{Model.LastName} {Model.FirstName}";
+}
+
+<div>
+    <h4>Employee: @FullName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Full Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.Label(FullName)
+        </dd>
+        <dt class="col-sm-2">
+            Employee Code
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmployeeCode)
+        </dd>
+        <dt class="col-sm-2">
+            Level
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LevelName)
+        </dd>
+        @if (!string.IsNullOrEmpty(Model.Phone))
+        {
+            <dt class="col-sm-2">
+                Phone
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+        }
+        @if (!string.IsNullOrEmpty(Model.Email))
+        {
+            <dt class="col-sm-2">
+                Email
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+        }
+        @if (!string.IsNullOrEmpty(Model.TeamLeaderName))
+        {
+            <dt class="col-sm-2">
+                Team Leader
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TeamLeaderName)
+            </dd>
+        }
+        @if (!string.IsNullOrEmpty(Model.DirectManagerName))
+        {
+            <dt class="col-sm-2">
+                Direct Manager
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DirectManagerName)
+            </dd>
+        }
+    </dl>
+    @if (Model.TeamMembers?.Any() ?? false)
+    {
+        <dl>
+            <dt>Team Members</dt>
+            <dd style="height:10px"></dd>
+            @foreach (var member in Model.TeamMembers)
+            {
+                <dd style="font-style: italic;">@member</dd>
+            }
+        </dl>
+    }
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

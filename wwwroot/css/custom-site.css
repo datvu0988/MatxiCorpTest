@@ -1,0 +1,296 @@
+﻿div.characters-left {
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+    color: grey;
+}
+
+input.input-file-upload-photos {
+    display: none;
+}
+
+/*ol.breadcrumb {
+    padding-inline-start: 0px;
+}*/
+
+.height-80 {
+    height: 80px;
+}
+
+.height-20 {
+    height: 20px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+div.hamburger-menu-icon {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+div.group-hamburger-menu-icon {
+    cursor: move;
+    width: 35px;
+}
+
+div.summary-box {
+    background-color: #E0E0E0;
+    border: 5px;
+    border-style: solid;
+    border-color: white;
+    position: relative;
+    word-break: break-word;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+div.min-height500 {
+    min-height: 500px;
+}
+
+div.min-height300 {
+    min-height: 300px;
+}
+
+div.box-body .left-image {
+    float: left;
+}
+
+    div.box-body .left-image img {
+        display: block;
+    }
+
+img.plus-image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+    img.plus-image:active {
+        opacity: 0.3;
+    }
+
+    img.plus-image:hover {
+        cursor: pointer;
+    }
+
+div.box-body .right-info {
+    margin-left: 220px;
+}
+
+div.box-body {
+    overflow: auto;
+    margin: 20px 20px 0 0;
+}
+
+div.box-header .btn-update {
+    float: right
+}
+
+div.box-header h3 {
+    float: left
+}
+
+div.box-header {
+    overflow: auto
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+p.image-title-cell {
+    margin: auto;
+    height: 30px;
+    text-align: center;
+}
+
+img.image-summary {
+    border: 1px solid #dee2e6;
+}
+
+div.orange-background {
+    background-color: #ffae42;
+}
+
+.text-center {
+    text-align: center;
+}
+
+div.box-header .btn-preview {
+    float: right;
+    margin-right: 20px;
+}
+
+.btn-summary {
+    float: right;
+    margin-right: 10px;
+}
+
+div.gallery-container .carousel-inner img.carousel-photo {
+    max-width: 700px;
+    max-height: 700px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    cursor: pointer;
+}
+
+.gallery-container {
+    background-color: black;
+    color: white;
+}
+
+    .gallery-container .gallery-header {
+        margin-bottom: 40px;
+    }
+
+        .gallery-container .gallery-header p {
+            width: 90%;
+            margin: auto;
+        }
+
+        .gallery-container .gallery-header h2 {
+            width: 90%;
+            margin: auto;
+        }
+
+div.gallery-container .carousel-control-next, .carousel-control-prev {
+    width: 5%;
+}
+
+div.gallery-container .carousel-control-next-icon, .carousel-control-prev-icon {
+    height: 60px;
+}
+
+div.gallery-container .carousel {
+    margin: 40px 0px 40px 0px;
+}
+
+div.gallery-container .carousel-inner .photo-name {
+    width: 90%;
+    margin: auto;
+}
+
+    div.gallery-container .carousel-inner .photo-name .fa {
+        float: left;
+        margin: 6px 6px 6px 6px;
+    }
+
+div.gallery-container .carousel-inner img.thumbnail {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+    div.gallery-container .carousel-inner img.thumbnail.selected {
+        border: 10px orange;
+        border-style: solid none;
+    }
+
+.large-text {
+    font-size: 1.5rem;
+}
+
+div.data-entry {
+    padding: 30px;
+    background: #ffae42;
+    border-radius: .80rem;
+}
+
+/*div.tooltip > .arrow {
+    color: white;
+}*/
+
+div.tooltip > .tooltip-inner {
+    background-color: white;
+    color: black;
+    max-width: none;
+    width: 500px;
+    text-align: left;
+}
+
+    div.tooltip > .tooltip-inner div.tooltip-row {
+        margin-bottom: 10px;
+    }
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: white;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+    border-top-color: white;
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.bs-tooltip-right .arrow::before {
+    border-right-color: white;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+}
+
+input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+    input[type=text] {
+        background-color: #f1f1f1;
+        width: 100%;
+    }
+
+    input[type=submit] {
+        background-color: DodgerBlue;
+        color: #fff;
+    }
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+    .autocomplete-items div {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border-bottom: 1px solid #d4d4d4;
+    }
+
+        .autocomplete-items div:hover {
+            /*when hovering an item:*/
+            background-color: #e9e9e9;
+        }
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
